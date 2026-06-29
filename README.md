@@ -34,7 +34,7 @@ make
 ```
 # Start a process
 pshell > run ls
-[ls] started (PID: 1234)
+[ls] started 
 
 # List running processes
 pshell > list
@@ -42,7 +42,8 @@ pshell > list
 
 # Send input and read output
 pshell > run cat /bin/cat
-[cat] started (PID: 1235)
+[cat] started
+
 pshell > send cat hello world
 pshell > output cat
 hello world
