@@ -22,3 +22,36 @@ A simple command-line tool to manage external processes in C++.
 git clone https://github.com/Rashidk-907/ProcessManager.git
 cd ProcessManager
 make
+```
+
+## Usage
+
+```bash
+./Pshell
+```
+
+## Example
+```
+# Start a process
+pshell > run ls
+[ls] started (PID: 1234)
+
+# List running processes
+pshell > list
+  ls  →  Running (PID: 1234)
+
+# Send input and read output
+pshell > run cat /bin/cat
+[cat] started (PID: 1235)
+pshell > send cat hello world
+pshell > output cat
+hello world
+
+# Stop a process
+pshell > stop cat
+[cat] stopped
+
+# Exit
+pshell > exit
+exit
+```
