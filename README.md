@@ -19,6 +19,6 @@ A simple command-line tool to manage external processes in C++.
 ## Building
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Rashidk-907/ProcessManager.git
 cd ProcessManager
 make
