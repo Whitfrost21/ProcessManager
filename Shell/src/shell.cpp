@@ -214,7 +214,7 @@ void Shell::execute(const std::string &input)
   //     if (m_manager.remove(name)) {
   //         std::cout << "[" << name << "] removed\n";
   //     } else {
-  //         printError("remove", "failed to remove " + name);
+  //         printError(" remove", "failed to remove " + name);
   //     }
   //     return;
   // }
