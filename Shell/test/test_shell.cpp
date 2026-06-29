@@ -11,7 +11,7 @@ int main()
   std::cout << "\tType 'help' for commands, 'exit' to quit\n\n";
   while (myshell.isRunning())
   {
-    std::cout << "pshell > ";
+    std::cout << "pShell > ";
     std::getline(std::cin, input);
     myshell.execute(input);
     std::cout << "\n";
