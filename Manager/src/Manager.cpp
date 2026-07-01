@@ -108,3 +108,20 @@ std::string Manager::status(const std::string &name)
     return "Unknown";
   }
 }
+
+bool Manager::remove(const std::string &name)
+{
+  auto it = m_processes.find(name);
+  if (it == m_processes.end())
+  {
+    std::cerr << "Process : " << name << " not found\n";
+    return false;
+  }
+  if (it->second->getStatus() == Process::State::Running)
+  {
+    std::cerr << "Process : " << name << " is still running. Stop it first.\n";
+    return false;
+  }
+  m_processes.erase(it);
+  return true;
+}

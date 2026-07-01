@@ -24,9 +24,11 @@ public:
   // Stop ALL processes
   void stopAll();
 
-  // Listl all processes
+  // List all processes
   std::vector<std::string> listAll();
 
   // Get status of a specific process
   std::string status(const std::string &name);
+
+  bool remove(const std::string &name);
 };
