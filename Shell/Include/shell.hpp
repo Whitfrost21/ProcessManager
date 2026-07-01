@@ -19,4 +19,5 @@ private:
   void send(const std::string &name, const std::vector<std::string> &data);
   void output(const std::string &name);
   void listAll();
+  void remove(const std::string &name);
 };

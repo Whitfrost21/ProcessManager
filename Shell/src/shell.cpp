@@ -208,16 +208,11 @@ void Shell::execute(const std::string &input)
     return;
   }
 
-  // @todo add remove command
-
-  // if (cmd == "remove" || cmd == "rm") {
-  //     if (m_manager.remove(name)) {
-  //         std::cout << "[" << name << "] removed\n";
-  //     } else {
-  //         printError(" remove", "failed to remove " + name);
-  //     }
-  //     return;
-  // }
+  if (cmd == "remove" || cmd == "rm")
+  {
+    remove(name);
+    return;
+  }
 
   std::cout << "unknown command: " << cmd << " (try help)\n";
 }
@@ -253,4 +248,16 @@ void Shell::stop()
 bool Shell::isRunning() const
 {
   return m_running;
+}
+
+void Shell::remove(const std::string &name)
+{
+  if (m_manager.remove(name))
+  {
+    std::cout << "[" << name << "] removed\n";
+  }
+  else
+  {
+    printError("remove", "failed to remove " + name);
+  }
 }
